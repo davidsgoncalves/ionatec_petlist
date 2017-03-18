@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use Faker to get random data
+gem 'faker'
+
 gem 'rack-cors'
 
 # Use jquery as the JavaScript library
