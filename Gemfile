@@ -26,6 +26,9 @@ gem 'faker'
 
 gem 'rack-cors'
 
+# Use Simple enum for unobtrusive enum-like fields for ActiveRecord
+gem 'simple_enum', '~> 2.0.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
