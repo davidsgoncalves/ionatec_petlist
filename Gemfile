@@ -26,8 +26,11 @@ gem 'faker'
 
 gem 'rack-cors'
 
-# Use Simple enum for unobtrusive enum-like fields for ActiveRecord
+# Use Simple Enum for unobtrusive enum-like fields for ActiveRecord
 gem 'simple_enum', '~> 2.0.0'
+
+# Use Annotate for add a comment of the current schema in the top of models
+gem 'annotate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
