@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20170318191650) do
   create_table "dogs", force: :cascade do |t|
     t.string  "name",        null: false
     t.integer "gender_cd",   null: false
-    t.integer "breeds_id",   null: false
+    t.integer "breed_id",    null: false
     t.integer "castrate_cd", null: false
     t.date    "birth_date",  null: false
     t.string  "owner_name",  null: false
     t.string  "owner_phone", null: false
     t.date    "last_visit",  null: false
-    t.index ["breeds_id"], name: "index_dogs_on_breeds_id"
+    t.index ["breed_id"], name: "index_dogs_on_breed_id"
     t.index ["name"], name: "index_dogs_on_name"
     t.index ["owner_name"], name: "index_dogs_on_owner_name"
     t.index ["owner_phone"], name: "index_dogs_on_owner_phone"

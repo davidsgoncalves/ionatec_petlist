@@ -13,17 +13,13 @@ if Breed.count == 0
   end
 end
 
-def check_breed(id)
-   Breed.first.id
-end
-
 if Dog.count == 0
   puts 'Creating dogs!'
   1000.times do
     Dog.create!(
         name: Faker::Cat.name,
         gender_cd: Faker::Number.between(1, 2),
-        breeds_id: Breed.all.map(&:id).sample,
+        breed_id: Breed.all.map(&:id).sample,
         castrate_cd: Faker::Number.between(0, 1),
         birth_date: Faker::Date.birthday(0, 22),
         owner_name: Faker::Name.name,
