@@ -11,6 +11,7 @@ if Breed.count == 0
   File.open('db/breeds.txt', 'r').each_line do |line|
     Breed.create! name: line.strip
   end
+  puts 'Breeds created'
 end
 
 if Dog.count == 0
@@ -27,4 +28,5 @@ if Dog.count == 0
         last_visit: Faker::Date.backward(120)
     )
   end
+  puts 'Dogs created!'
 end
