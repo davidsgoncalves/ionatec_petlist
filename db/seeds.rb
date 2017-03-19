@@ -21,7 +21,7 @@ if Dog.count == 0
         name: Faker::Cat.name,
         gender_cd: Faker::Number.between(1, 2),
         breed_id: Breed.all.map(&:id).sample,
-        castrate_cd: Faker::Number.between(0, 1),
+        castrated: Faker::Boolean.boolean,
         birth_date: Faker::Date.birthday(0, 22),
         owner_name: Faker::Name.name,
         owner_phone: "(#{Faker::Number.number(2)}) 9#{Faker::Number.number(4)}-#{Faker::Number.number(4)}",

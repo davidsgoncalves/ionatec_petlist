@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318191650) do
+ActiveRecord::Schema.define(version: 20170319223845) do
 
   create_table "breeds", force: :cascade do |t|
     t.string   "name",       null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170318191650) do
     t.string  "name",        null: false
     t.integer "gender_cd",   null: false
     t.integer "breed_id",    null: false
-    t.integer "castrate_cd", null: false
+    t.boolean "castrated",   null: false
     t.date    "birth_date",  null: false
     t.string  "owner_name",  null: false
     t.string  "owner_phone", null: false
