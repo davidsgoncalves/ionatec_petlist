@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {Table} from 'react-bootstrap'
+import Moment from 'moment';
 
 const _ = require('lodash');
 
@@ -20,7 +21,7 @@ const TableComponent = React.createClass({
                         <th>Raça</th>
                         <th>Genero</th>
                         <th>Castrado?</th>
-                        <th>Idade</th>
+                        <th>Data de Nasc.</th>
                         <th>Dono</th>
                         <th>Telefone</th>
                         <th>Última Visita</th>
@@ -49,13 +50,13 @@ const TableComponent = React.createClass({
         return (
             <tr key={i}>
                 <td>{ row.name }</td>
-                <td>{ row.breed_name }</td>
+                <td>{ row.breed }</td>
                 <td><Gender gender={row.gender_cd}/></td>
-                <td>{ <Bool bool={row.castrated}/> }</td>
-                <td>{ row.birth_date }</td>
+                <td><Bool bool={row.castrated}/></td>
+                <td><FormatDate date={row.birth_date}/></td>
                 <td>{ row.owner_name }</td>
                 <td>{ row.owner_phone }</td>
-                <td>{ row.last_visit }</td>
+                <td><FormatDate date={row.last_visit}/></td>
             </tr>
         );
     }
@@ -73,6 +74,11 @@ function Bool({bool}) {
         return <span>Sim</span>;
     else
         return <span>Não</span>;
+}
+
+function FormatDate({date}) {
+    Moment.locale('pt-br');
+    return(<div> {Moment(date).format('DD/MM/YYYY')} </div>)
 }
 
 export default TableComponent;

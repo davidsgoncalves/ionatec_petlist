@@ -5,5 +5,5 @@
                     dogs: @dogs,
                     params: params.except(:authenticity_token, :utf8, :page),
                     page: params[:page],
-                    total: @dogs.total_entries
+                    total: @total_entries
 %>

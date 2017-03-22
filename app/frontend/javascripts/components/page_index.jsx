@@ -11,22 +11,22 @@ const PageIndex = React.createClass({
     changePage(params = {}) {
         let propParams = this.props.params;
         Object.assign(propParams, params);
-        window.location = url.format({ pathname: this.props.path, query: propParams});
+        window.location = url.format({pathname: this.props.path, query: propParams});
     },
 
     render() {
+        let pag =  <div className="container form-body"><PaginationComponent onSelect={this.changePage} page={parseInt(this.props.page) || 1} pageSize={15}
+                                       total={this.props.total} label="Cachorros"/></div>;
         return (
             <div>
                 <div className="container form-body">
-                    <Filters breeds={this.props.breeds} path={this.props.path} token={this.props.token} params={this.props.params}/>
+                    <Filters breeds={this.props.breeds} path={this.props.path} token={this.props.token}
+                             params={this.props.params}/>
                 </div>
                 <div className="container form-body">
                     <TableComponent dogs={this.props.dogs}/>
                 </div>
-                <div className="container form-body">
-                    <PaginationComponent onSelect={this.changePage} page={parseInt(this.props.page) || 1} pageSize={15}
-                                         total={this.props.total} label="Cachorros"/>
-                </div>
+                {this.props.total > 15 ? pag : null}
             </div>
         );
     }
