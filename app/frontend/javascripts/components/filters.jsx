@@ -6,6 +6,17 @@ import ReactSelect from 'react-select';
 import 'react-select/dist/react-select.css';
 
 const Filters = React.createClass({
+    propTypes: {
+        page: React.PropTypes.number,
+        breed_id: React.PropTypes.number,
+        castrated: React.PropTypes.number,
+        name: React.PropTypes.string,
+        last_visit_since: React.PropTypes.string,
+        last_visit_until: React.PropTypes.string,
+        owner_name: React.PropTypes.string,
+        birth_date: React.PropTypes.string
+    },
+
     getInitialState() {
         return {
             page: 1,

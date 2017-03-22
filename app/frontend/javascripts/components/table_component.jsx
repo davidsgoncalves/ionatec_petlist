@@ -6,6 +6,10 @@ import {Table} from 'react-bootstrap'
 const _ = require('lodash');
 
 const TableComponent = React.createClass({
+    propTypes: {
+        dogs: React.PropTypes.object
+    },
+
     render() {
         return (
             <div>
