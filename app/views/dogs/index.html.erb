@@ -4,5 +4,6 @@
                     token: form_authenticity_token,
                     dogs: @dogs,
                     params: params.except(:authenticity_token, :utf8, :page),
-                    page: params[:page]
+                    page: params[:page],
+                    total: @dogs.total_entries
 %>

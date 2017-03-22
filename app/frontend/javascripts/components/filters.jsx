@@ -25,7 +25,6 @@ const Filters = React.createClass({
     },
 
     getBreedValue(val) {
-        console.log(val);
         this.setState({breed_id: val});
     },
 

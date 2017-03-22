@@ -2,7 +2,8 @@ class DogsController < ApplicationController
   def index
     @breeds = Breed.to_select_component
     @dogs = Dog.search_with_params(dog_params.except(:authenticity_token, :utf8, :page))
-                .paginate(page: params[:page])
+                .paginate(page: params[:page], per_page: 15)
+
   end
 
   private
