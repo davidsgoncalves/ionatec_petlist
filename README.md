@@ -8,7 +8,7 @@ Ionatec Petlist uses Reactjs, Ruby on Rails and NPM, the root route will take yo
 
 ### Prerequisites
 
-What things you need to install the make project be runnable
+What you need to install the make project be runnable.
 
 ```
 Ruby v-2.4.0
@@ -25,32 +25,38 @@ Step 1: Clone repository:
 git clone https://github.com/davidsgoncalves/ionatec_petlist.git
 ```
 
-Step 2: Run NPM Install, on root folder of git clone
+Step 2: Run NPM Install, on root folder of git clone.
 
 ```
 npm install
 ```
 
-Step 3: Run Bundle Install, on root folder of git clone
+Step 3: Run Bundle Install, on root folder of git clone.
 
 ```
 bundle install
 ```
 
-Step 4: Setup database
+Step 4: Setup database.
 
 ```
 rake db:setup
 ```
 
-Step 5: Run application
+Step 5: Run application.
 
 ```
 npm start
 ```
-and then
+and
 ```
 rails s
+```
+
+Step 6: Access application.
+access url:
+```
+localhost:3000
 ```
 
 ## Running the tests
