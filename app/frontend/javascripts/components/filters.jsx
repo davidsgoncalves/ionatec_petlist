@@ -115,7 +115,6 @@ function Input({label, name, type = 'text', value}) {
 }
 
 function Select({label, options, value, callback, name}) {
-    console.log(value);
     return (
         <div style={{marginTop: 4}}>
             <ControlLabel>{label}</ControlLabel>

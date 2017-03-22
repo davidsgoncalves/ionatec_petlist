@@ -15,7 +15,6 @@ const PageIndex = React.createClass({
     },
 
     render() {
-        console.log(this.props.page);
         return (
             <div>
                 <div className="container form-body">
