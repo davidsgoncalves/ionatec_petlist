@@ -1,0 +1,8 @@
+<%= react_component 'PageIndex',
+                    breeds: @breeds,
+                    path: root_path,
+                    token: form_authenticity_token,
+                    dogs: @dogs,
+                    params: params.except(:authenticity_token, :utf8, :page),
+                    page: params[:page]
+%>

@@ -23,13 +23,13 @@ class Dog < ActiveRecord::Base
 
     relation = relation.where(castrated: params[:castrated]) unless params[:castrated] == nil
     relation = relation.where('name LIKE ?', "%#{params[:name]}%") if params[:name].present?
-    relation = relation.where(gender_cd: params[:gender_cd]) if params[:gender_cd].present? && params[:gender_cd] > 0
+    relation = relation.where(gender_cd: params[:gender_cd]) if params[:gender_cd].present?
     relation = relation.where(breed_id: params[:breed_id]) if params[:breed_id].present?
     relation = relation.where('owner_name LIKE ?', "%#{params[:owner_name]}%") if params[:owner_name].present?
     relation = relation.where(birth_date: params[:birth_date]) if params[:birth_date].present?
 
-    relation = relation.where('last_visit >= ?', params[:last_visit_since]) if params[:last_visit_since]
-    relation = relation.where('last_visit <= ?', params[:last_visit_until]) if params[:last_visit_until]
+    relation = relation.where('last_visit >= ?', params[:last_visit_since]) if params[:last_visit_since].present?
+    relation = relation.where('last_visit <= ?', params[:last_visit_until]) if params[:last_visit_until].present?
 
     relation
   end

@@ -24,6 +24,9 @@ gem 'coffee-rails', '~> 4.2'
 # Use Faker to get random data
 gem 'faker'
 
+# Pagination gem
+gem 'will_paginate', '~> 3.1.0'
+
 gem 'rack-cors'
 
 # Use Simple Enum for unobtrusive enum-like fields for ActiveRecord

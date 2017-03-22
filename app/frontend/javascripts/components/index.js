@@ -1,3 +1,3 @@
 'use strict';
 
-export { default as Teste } from './Teste';
+export { default as PageIndex } from './page_index'
